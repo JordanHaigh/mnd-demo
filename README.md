@@ -22,7 +22,7 @@ Open `/presentation/index.html` from the running site, or use Presentation in th
 ## Functional demonstrations
 
 - AAC: browser speech, Stop, local phrase suggestions, editable and reorderable boards, pointer handwriting with Undo, editable simulated recognition, local recording/import/playback with IndexedDB, passport editing/printing, keyboard scanning and pointer dwell, persistent accessibility settings, guided demo.
-- MND Life: participant, family/historical and researcher perspectives; locally editable sourced timeline and life factors; medical file metadata archive and search; persistent granular demo consent; generated cohort filtering with a small-count threshold; aggregate export and local access-request drafts; guided demos for each perspective.
+- MND Life: participant, family/historical and researcher perspectives; locally editable sourced timeline and life factors; medical file metadata archive and search; persistent granular demo consent; 2,400 generated cases across 24 regions; interactive regional maps and shared-factor case connections; cohort filtering with a small-count threshold; aggregate export and local access-request drafts; guided demos for each perspective.
 
 ## Prototype boundaries
 
@@ -37,3 +37,9 @@ AAC message content and audio are excluded from the Life research model. Demo co
 ## Validation
 
 `npm run build` checks TypeScript and produces the static bundle. `npm test` checks combined cohort filtering, consent exclusion, small-count suppression and deterministic identifier-free synthetic data. Browser QA should cover navigation, board editing/persistence, drawing, imports, tour completion, consent and mobile layouts. Microphone permission and available speech voices depend on the browser/device and must be tried on the presentation device.
+
+## Synthetic research explorer
+
+Switch MND Life’s perspective to Researcher, then open Case explorer. Select states, regions, diagnosis periods, work categories or potential exposures. The location view shows regional counts; the connections view links fictional sample cases through shared region, occupation, recorded exposure, prior place or diagnosis year. Patterns are deliberately planted for the demonstration. Counts are not population-adjusted rates, and shared fields do not establish contact or cause. Counts below 10 are suppressed; exports contain aggregate summaries only.
+
+The Australian outline is from [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) (public domain). Regional markers are approximate; no individual coordinates or addresses are generated.
