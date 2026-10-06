@@ -1,6 +1,6 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import { X, ChevronLeft, ChevronRight, Sparkles, Info } from 'lucide-react';
-export function PageTitle({ eyebrow, title, description, action }: {eyebrow:string;title:string;description:string;action?:ReactNode}) { return <div className="page-title"><div><span className="eyebrow">{eyebrow}</span><h1>{title}</h1><p>{description}</p></div>{action}</div>; }
+export function PageTitle({ eyebrow, title, description, action }: {eyebrow?:string;title:string;description?:string;action?:ReactNode}) { return <div className="page-title"><div>{eyebrow&&<span className="eyebrow">{eyebrow}</span>}<h1>{title}</h1>{description&&<p>{description}</p>}</div>{action}</div>; }
 export function Note({children}:{children:ReactNode}) {return <div className="note"><Info size={18}/><div>{children}</div></div>;}
 export function Modal({title,children,onClose}:{title:string;children:ReactNode;onClose:()=>void}) {
   const dialog=useRef<HTMLDialogElement>(null);
