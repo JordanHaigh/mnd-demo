@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-export type Product = 'overview' | 'communicate' | 'life' | 'presentation';
+export type Product = 'overview' | 'communicate' | 'life' | 'presentation' | 'resources';
 export type Notice = (message: string) => void;
 export function useLocal<T>(key: string, initial: T): [T, (value: T | ((previous: T) => T)) => void] {
   const [value, setValue] = useState<T>(() => { try { const saved = localStorage.getItem(`mnd-demo:${key}`); return saved ? JSON.parse(saved) : initial; } catch { return initial; } });

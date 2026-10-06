@@ -1,6 +1,6 @@
-# MND Digital demonstration
+# MND demo demonstration
 
-An independent prototype by Jordan Haigh, prepared for a conversation with MND Australia. A single React application includes **MND Communicate**, **MND Life**, and a **10-slide HTML presentation** adapted from Beautiful HTML Templates’ Blue Professional template.
+An independent prototype by Jordan Haigh, prepared for a conversation with MND Australia. A single React application includes **Communication tools**, **MND records**, and a **10-slide HTML presentation** adapted from Beautiful HTML Templates’ Blue Professional template.
 
 ## Run locally
 
@@ -15,14 +15,16 @@ Open the Local URL printed by Vite. Build the static site with `npm run build`. 
 
 ## Presentation
 
-Open `/presentation/index.html` from the running site, or use Presentation in the app. Arrow keys, Page Up/Down, Home/End, touch swipes and buttons navigate slides. Print / save PDF prints all ten slides. The deck links directly into both prototypes.
+Open the presentation at the top of Demo overview, or use `/presentation/index.html`. Arrow keys, Page Up/Down, Home/End, touch swipes and buttons navigate slides. Print / save PDF prints all ten slides. The deck links directly into both prototypes and Resources.
+
+The Resources page (`#resources`) links to MND Australia's communication guidance, voice and message banking guide, information resources, support services, research and MiNDAus Registry.
 
 `templates/blue-professional/` preserves the source template and its MIT license. Regenerate the adapted deck with `node scripts/build-presentation.mjs`. MND Australia-inspired colours are based on the organisation’s public stylesheet: blue `#2254a0`, light blue `#8594c6`, pale blue `#e8f3ff`, orange `#df6c32`. The app uses its own concept wordmark, not an official MND Australia logo. Inter and Space Grotesk are bundled locally to keep rendering independent of Google Fonts requests.
 
 ## Functional demonstrations
 
 - AAC: browser speech, Stop, local phrase suggestions, editable and reorderable boards, pointer handwriting with Undo, editable simulated recognition, local recording/import/playback with IndexedDB, passport editing/printing, keyboard scanning and pointer dwell, persistent accessibility settings, guided demo.
-- MND Life: participant, family/historical and researcher perspectives; locally editable sourced timeline and life factors; medical file metadata archive and search; persistent granular demo consent; 2,400 generated cases across 24 regions; interactive regional maps and shared-factor case connections; cohort filtering with a small-count threshold; aggregate export and local access-request drafts; guided demos for each perspective.
+- MND records: participant, family/historical and researcher perspectives; locally editable sourced timeline and life factors; medical file metadata archive and search; persistent granular demo consent; 2,400 generated cases across 24 regions; interactive regional maps and shared-factor case connections; cohort filtering with a small-count threshold; aggregate export and local access-request drafts; guided demos for each perspective.
 
 ## Prototype boundaries
 
@@ -32,7 +34,7 @@ There is no backend, authentication system, secure clinical database or real res
 
 Personal voice integration is a planned server-side feature. Browser speech is never described as Margaret’s real voice. Message banking plays actual recorded or imported audio. Handwriting recognition and head/eye tracking are explicitly simulations. Switch scanning accepts Space/Enter as a keyboard demonstration; it does not claim specialist hardware compatibility.
 
-AAC message content and audio are excluded from the Life research model. Demo consent, family authority declarations and research request drafts are local illustrations, with no external submission or actual approval.
+AAC message content and audio are excluded from the records research model. Demo consent, family authority declarations and research request drafts are local illustrations, with no external submission or actual approval.
 
 ## Validation
 
@@ -40,6 +42,6 @@ AAC message content and audio are excluded from the Life research model. Demo co
 
 ## Synthetic research explorer
 
-Switch MND Life’s perspective to Researcher, then open Case explorer. Select states, regions, diagnosis periods, work categories or potential exposures. The location view shows regional counts; the connections view links fictional sample cases through shared region, occupation, recorded exposure, prior place or diagnosis year. Patterns are deliberately planted for the demonstration. Counts are not population-adjusted rates, and shared fields do not establish contact or cause. Counts below 10 are suppressed; exports contain aggregate summaries only.
+Switch MND records’s perspective to Researcher, then open Case explorer. Select states, regions, diagnosis periods, work categories or potential exposures. The location view shows regional counts; the connections view links fictional sample cases through shared region, occupation, recorded exposure, prior place or diagnosis year. Patterns are deliberately planted for the demonstration. Counts are not population-adjusted rates, and shared fields do not establish contact or cause. Counts below 10 are suppressed; exports contain aggregate summaries only.
 
 The Australian outline is from [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) (public domain). Regional markers are approximate; no individual coordinates or addresses are generated.
