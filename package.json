@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "node scripts/build-presentation.mjs && tsc --noEmit && vite build",
+    "start": "vite preview --host 0.0.0.0 --port ${PORT:-3000}",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.mjs"
   },
