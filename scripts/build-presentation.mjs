@@ -7,7 +7,7 @@ const runtime=original.match(/<script>([\s\S]*?)<\/script>/)[1]
  .replace("slide.classList.remove('active', 'prev');", "slide.classList.remove('active', 'prev'); slide.inert = i !== current; slide.setAttribute('aria-hidden', String(i !== current));")
  .replace('let current = 0;',"let current = Math.min(9, Math.max(0, Number(location.hash.slice(1)) - 1 || 0));")
  .replace('currentEl.textContent = current + 1;',"currentEl.textContent = current + 1; history.replaceState(null, '', '#' + (current + 1));");
-const header=(topic,tag)=>`<div class="slide-header"><h4>${topic}</h4><span class="tag">${tag}</span></div>`;
+const header=(topic)=>`<div class="slide-header"><h4>${topic}</h4></div>`;
 const block=(title,points)=>`<div class="detail-block"><h3>${title}</h3><ul>${points.map(p=>`<li>${p}</li>`).join('')}</ul></div>`;
 const steps=(items)=>`<div class="timeline-track">${items.map(([title,description],i)=>`<div class="timeline-step"><div class="step-circle">${i+1}</div><div class="step-title">${title}</div><p class="step-desc">${description}</p></div>`).join('')}</div>`;
 const slides=[
